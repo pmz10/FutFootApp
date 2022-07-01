@@ -1,0 +1,14 @@
+{
+  "name": "FutFootApp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pmz10/FutFootApp.git",
+  "author": "AldoJosue31 <93854182+AldoJosue31@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^19.0.6"
+  }
+}
