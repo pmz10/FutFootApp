@@ -21,6 +21,7 @@ function createWindow() {
       },
       show: false,
     });
+    mainWindow.loadURL('http://localhost:3000')
   
     // To maximize the window
     mainWindow.maximize();
@@ -41,4 +42,3 @@ function createWindow() {
       app.quit();
     }
   });
-  
