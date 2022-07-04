@@ -9,13 +9,17 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "concurrently": "^7.2.2",
-    "electron": "^19.0.7",
-    "electron-builder": "^23.1.0",
+    "cross-env": "^7.0.3",
+    "electron-packager": "^15.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "wait-on": "^6.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "electron": "^19.0.7",
+    "electron-builder": "^23.1.0"
   },
   "main": "main.js",
   "scripts": {
@@ -23,7 +27,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-react": "concurrently \"SET BROWSER=none && yarn start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-react": "concurrently -k \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "pack": "build --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ]
   },
   "eslintConfig": {
     "extends": [
