@@ -4,9 +4,12 @@ import './App.css';
 
 const Hello = () => {
   return (
-    <div>
-      <h1>Mamahuevo</h1>
-    </div>
+    <tbody>
+      <div className='nav'></div>
+      <div>
+        <h2>Mamahuevo</h2>
+      </div>
+      </tbody>
   );
 };
 
